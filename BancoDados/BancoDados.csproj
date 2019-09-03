@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +44,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ProdutoDAO.cs" />
+    <Compile Include="Migrations\201909031319463_AddCategoriaTableProduto.cs" />
+    <Compile Include="Migrations\201909031319463_AddCategoriaTableProduto.Designer.cs">
+      <DependentUpon>201909031319463_AddCategoriaTableProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909031345398_CreateBD.cs" />
+    <Compile Include="Migrations\201909031345398_CreateBD.Designer.cs">
+      <DependentUpon>201909031345398_CreateBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CadastrarProduto.cs" />
+    <Compile Include="Views\ListarProdutos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityFramework.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909031319463_AddCategoriaTableProduto.resx">
+      <DependentUpon>201909031319463_AddCategoriaTableProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909031345398_CreateBD.resx">
+      <DependentUpon>201909031345398_CreateBD.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
